@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
+import SignUpForm from './components/SignUpForm';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  render(){
+    return (
+      <Router>
+        <div className="App">
+            <div className="App__Aside"></div>
+            <div className="App__Form">
+                <div className="PageSwitcher">
+             
+                    <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="PageSwitcher__Item ">Sign Up</NavLink>
+                </div>
+
+                <div className="FormTitle">
+                  
+                    <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link ">Sign Up</NavLink>
+                </div>
+
+                <Route exact path='/' component={SignUpForm}>
+                  
+                </Route>
+
+
+                
+
+            </div>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
+

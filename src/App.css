@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height:100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color:white;
 }
 
-.App-link {
-  color: #61dafb;
+.App__Aside{
+  width: 50%;
+  background-color: aquamarine;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App__Form{
+  width: 50%;
+  background-color: cadetblue;
+  padding: 25px 40px;
+  overflow: auto;
+}
+
+.FormField__Checkbox{
+  position: relative;
+  top:1.5px;
+}
+
+.FormField__TermsLink{
+  color:white;
+  border-bottom:1px solid #199087;
+  text-decoration: none;
+  padding-bottom: 2px;
+  margin-left:5px;
+}
+
+.PageSwitcher{
+  text-align: right;
+  height: 10vh;
+  width: 100%;
+  background-color: cornflowerblue;
+
+}
+
+.PageSwitcher__Item{
+  position: relative;
+  top:6px;
+  right:10px;
+  height: 45px;
+  width:90px;
+  border-radius: 45px 45px 0 0;
+  -moz-border-radius: 45px 45px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+
+
+}
+
+.FormTitle{
+  margin-top: 20px;
+  height: 10vh;
+  width: 100%;
+}
+
+.FormCenter{
+  text-align: left;
+  padding: 5px;
+
+
+}
+
+.FormField{
+  margin-top: 10px;
+}
+
+.FormField__Input{
+  width: 50%;
+  height: 30px;
+}
+
+.FormField__CheckboxLabel{
+  font-size: 1.2rem;
+}
+
+
+.FormTitle__Link--Active{
+  border-bottom: 3px solid #29b6f6;
+  transition: border-bottom .5s ease-in-out;
+}
+
+.errorMessage{
+    background-color: red;
 }
